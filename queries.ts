@@ -1,6 +1,6 @@
-// mutation{
+mutation userData{
 //     createUser(input:{
-//       name: "test"
+//       name: "test4"
 //       auth: AUTHERIZED,
 //       emails: [
 //         {email: "test0@test.com"},
@@ -12,12 +12,34 @@
 //       id
 //       name
 //       auth
+      
+//       emails {
+//               email
+//       }
 //     }
 //   }
   
-//   query{
-//     getUser(id:{"a2fdab6d-8230-44d0-8196-25a5ef32bda8"})
+//   query userDataQuery{
+//     getUser(id:"f680b370-f22e-434d-a3fb-cdc6cc52e411")
 //     {
-//       emails
+//       name
+//       id
+//       emails {
+//         email
+//       }
 //     }
 //   }
+  
+//   query users{
+//     getAllUser {
+//       id
+//       name
+//       auth
+      
+//       emails {
+//         email
+//       }
+//     }
+//   }
+  
+  
