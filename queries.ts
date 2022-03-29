@@ -1,4 +1,4 @@
-mutation userData{
+// mutation userData{
 //     createUser(input:{
 //       name: "test4"
 //       auth: AUTHERIZED,

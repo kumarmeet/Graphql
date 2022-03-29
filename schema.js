@@ -21,6 +21,7 @@ const typeDefs = buildSchema(`
 
     type Query{
         getUser(id: ID): User
+        getAllUser: [User]
     }
 
     input EmailInput{
@@ -52,6 +53,8 @@ class User{
 
 const userHolder = {}
 
+const allUser = [];
+
 
 const root = {
     getUser: ({id}) => {
@@ -61,8 +64,13 @@ const root = {
     createUser: ({input}) => {
         let id = uuid();
         userHolder.id = input;
-        console.log(input);
+        allUser.push(new User(id, input));
+        // console.log(allUser);
         return new User(id, input);
+    },
+
+    getAllUser: () => {
+        return allUser;
     }
 };
 
